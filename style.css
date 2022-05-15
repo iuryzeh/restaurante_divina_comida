@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+:root{
+    --main--radius: 10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../restaurante_divina_comida/images/imagem_fundo_cardapio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 2fr 0.4fr;
+    grid-template-areas:"h h"
+                        "c1 c2"
+                        "c3 c4"
+                        "f f";
+    grid-gap: 10px;
+    margin: 8px;
+    text-transform: uppercase;
+
+}
+
+header{
+/*     background-color: aqua; */
+    grid-area: h;
+    display: grid;
+    grid-template-columns: 0.15fr 0.85fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "h1 h2";
+}
+
+.header1{
+/*     background-color: darkkhaki; */
+    grid-area: h1;
+    background-image:url(../restaurante_divina_comida/images/restaurant.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.header2{
+/*     background-color: orangered; */
+    grid-area: h2;
+    color: bisque;
+/*     display: flex;
+    align-items: center; */
+    font-family: 'Satisfy', cursive;
+    font-size: 2em;
+}
+
+.content1{
+/*     background-color: blueviolet; */
+    grid-area: c1;
+    border-radius:var(--main--radius);
+    padding: 10px;
+    font-family: 'Satisfy', cursive;
+    color: bisque;
+    padding-left: 20px
+}
+
+.content2{
+/*     background-color: chartreuse; */
+    grid-area: c2;
+    background-image:url(../restaurante_divina_comida/images/imagem_moqueca.jpg);
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius:var(--main--radius);
+    opacity:0.8;
+}
+
+.content3{
+/*     background-color: darkblue; */
+    grid-area: c3;
+    background-image:url(../restaurante_divina_comida/images/imagem_lanche.jpg);
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius:var(--main--radius);
+    opacity:0.8;
+}
+
+.content4{
+/*     background-color: darkgreen; */
+    grid-area: c4;
+    border-radius:var(--main--radius);
+    padding: 10px;
+    font-family: 'Satisfy', cursive;
+    color: bisque;
+}
+
+footer{
+/*     background-color: magenta; */
+    grid-area: f;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.4fr;
+    grid-template-areas:"f1"
+                        "f2";
+    grid-gap: 5px;
+}
+
+.footer1{
+    background-color: rgb(48, 44, 44);
+    grid-area: f1;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    border-radius:var(--main--radius);
+}
+
+.footer2{
+    background-color: bisque;
+    grid-area: f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    text-align: center;
+    border-radius:var(--main--radius);
+}
+
+.titulo{
+    text-align: center;
+    color: bisque;
+    font-size: 2rem;
+}
+
+h3{
+    padding: 5px;
+    color: white;
+}
+
+li{
+    list-style-type: none;
+}
+
+.content1 li{
+    margin-left:10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link, a:visited,  a:hover, a:active
+{
+    color: bisque;
+    text-decoration: none;
+}
+
+.footer1 li{
+    display: inline-block;
+    text-transform: lowercase;
+}
+
+@media screen and (max-width:550px){
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:"h"
+                            "c1"
+                            "c4"
+                            "f";
+        margin-right: -10px;
+    }
+
+    
+    
+    .header2{
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    .content1{
+        background-image:url(../restaurante_divina_comida/images/imagem_lagosta.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        opacity: .7;
+        text-align: center;
+    }
+
+    .content4{
+        background-image:url(../restaurante_divina_comida/images/imagem_batata.jpg);
+        background-size:cover;
+        background-repeat: no-repeat;
+        opacity: .7;
+        text-align: center;
+    }
+
+    .titulo{
+        font-size: 1.6em;
+    }
+
+    .footer1, .footer2{
+        opacity:0.9;
+    }
+    
+}
+
